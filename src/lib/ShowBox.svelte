@@ -8,7 +8,7 @@
 </script>
 
 <div class="accordionItem">
-	<AccordionItem {open} transitionType="slide">
+	<AccordionItem {open} transitionParams={{ duration: 0 }}>
 		<span slot="header">{date} - {venue}</span>
 
 		<div id="details">
