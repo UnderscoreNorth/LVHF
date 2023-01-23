@@ -12,8 +12,8 @@
 	let width: number;
 	let links = [
 		['/', 'LVHF'],
-		['/shows', 'Shows'],
-		['/blog', 'Blog']
+		['/shows', 'SHOWS'],
+		['/blog', 'BLOG']
 	];
 </script>
 
@@ -58,6 +58,29 @@
 		<a href="/">LVHF</a>{$page.route.id !== '/'
 			? '-' + $page.route.id?.substring(1).toUpperCase()
 			: ''}
+		<div id="share">
+			<button
+				class="icon"
+				on:click={() =>
+					navigator.share({
+						title: 'LVHF',
+						text: 'Indie/Noise/Post-Hardcore from Hamilton, Ontario',
+						url: 'https://lvhf.band' + $page.route.id
+					})}
+			>
+				<svg
+					class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-1shn170"
+					focusable="false"
+					aria-hidden="true"
+					viewBox="0 0 24 24"
+					data-testid="ShareIcon"
+					tabindex="-1"
+					><path
+						d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"
+					/></svg
+				>
+			</button>
+		</div>
 	{:else}
 		<div id="desktop">
 			{#each links as link}
@@ -70,6 +93,10 @@
 <slot />
 
 <style>
+	#share {
+		text-align: right;
+		flex-grow: 1;
+	}
 	nav {
 		font-size: 2rem;
 		line-height: 2rem;
@@ -85,6 +112,7 @@
 		left: 0;
 		width: calc(100% - 2rem);
 		z-index: 1;
+		height: 2rem;
 	}
 	.underlined {
 		text-decoration: underline;
@@ -138,7 +166,7 @@
 		position: fixed;
 		z-index: 2;
 		left: 0;
-		top: 0;
+		top: 4rem;
 		bottom: 0;
 		background: var(--color-beige);
 		padding: 1rem;
