@@ -25,7 +25,7 @@
 		</a>
 	</div>
 	<img id="band-photo" src="Jan-21.jpg" alt="band" />
-	<p>Indie/Noise/Post-Hardcore from Hamilton, Ontario</p>
+	<p>Indie/Post-Hardcore Trio from Hamilton, Ontario</p>
 </div>
 
 <style>

@@ -64,7 +64,7 @@
 				on:click={() =>
 					navigator.share({
 						title: 'LVHF',
-						text: 'Indie/Noise/Post-Hardcore from Hamilton, Ontario',
+						text: 'Indie/Post-Hardcore from Hamilton, Ontario',
 						url: 'https://lvhf.band' + $page.route.id
 					})}
 			>

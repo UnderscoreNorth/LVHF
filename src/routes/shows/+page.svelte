@@ -1,43 +1,19 @@
-<script>
+<script lang="ts">
 	import ShowBox from '../../lib/ShowBox.svelte';
 	import { Accordion } from 'flowbite-svelte';
+	export let data: unknown;
 </script>
 
 <div id="main">
-	<Accordion>
-		<ShowBox
-			date={'Jan 21, 2023'}
-			open={true}
-			venue={'Doors Pub: Taco Joint & Metal Bar'}
-			poster={'/posters/2023-01-21.jpg'}
-			setList={[
-				'Chomboscope (Intro)',
-				'Flaked Off',
-				'On and Out',
-				'Blister in the Sun (Cover)',
-				'Coward',
-				'Claust',
-				'Tell Me Why (Cover)',
-				'Live Variables Have Failed',
-				'Holland 1945 (Cover)'
-			]}
-		/>
-		<ShowBox
-			date={'Dec 18, 2022'}
-			open={false}
-			venue={'The Casbah'}
-			poster={'/posters/2022-12-18.jpg'}
-			setList={[
-				'Flaked Off',
-				'On and Out',
-				'Blister in the Sun (Cover)',
-				'Coward',
-				'Claust',
-				'Live Variables Have Failed',
-				'Holland 1945 (Cover)'
-			]}
-		/>
-	</Accordion>
+	{#await data}
+		Loading...
+	{:then}
+		<Accordion>
+			{#each data.data as show}
+				<ShowBox data={show} />
+			{/each}
+		</Accordion>
+	{/await}
 </div>
 
 <style>
