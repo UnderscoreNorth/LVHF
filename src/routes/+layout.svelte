@@ -17,6 +17,18 @@
 	];
 </script>
 
+<svelte:head>
+	<title
+		>LVHF{$page.route.id !== '/' ? ' - ' + $page.route.id?.substring(1).toUpperCase() : ''}</title
+	>
+	<meta property="og:url" content={'https://lvhf.band' + $page.route.id} />
+	<meta
+		property="og:title"
+		content={'LVHF' + $page.route.id !== '/'
+			? ' - ' + $page.route.id?.substring(1).toUpperCase()
+			: ''}
+	/>
+</svelte:head>
 <svelte:window bind:innerWidth={width} />
 <Drawer
 	backdrop={true}
