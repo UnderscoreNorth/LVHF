@@ -4,7 +4,7 @@
 </script>
 
 <div id="main">
-	<Accordion multiple>
+	<Accordion>
 		<ShowBox
 			date={'Jan 21, 2023'}
 			open={true}

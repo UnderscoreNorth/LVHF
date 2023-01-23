@@ -12,8 +12,8 @@
 	let width: number;
 	let links = [
 		['/', 'LVHF'],
-		['/blog', 'Blog'],
-		['/shows', 'Shows']
+		['/shows', 'Shows'],
+		['/blog', 'Blog']
 	];
 </script>
 
