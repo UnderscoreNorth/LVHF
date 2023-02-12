@@ -1,11 +1,12 @@
 <script lang="ts">
 	import { AccordionItem } from 'flowbite-svelte';
 	export let data: Object;
+	export let index: number;
 	const [yyyy, mm, dd, hh, mi] = data.date.split(/[/:\-T]/);
 </script>
 
 <div class="accordionItem">
-	<AccordionItem transitionParams={{ duration: 0 }}>
+	<AccordionItem transitionParams={{ duration: 0 }} open={index == 0 ? true : false}>
 		<span slot="header"
 			>{yyyy}-{mm}-{dd} {hh}:{mi} - {data.venue}, {data.city}, {data.province}</span
 		>
@@ -22,12 +23,14 @@
 						</svg>
 					</a>
 				{/if}
-				Setlist
-				<ol class="list-decimal">
-					{#each data.Setlist as song}
-						<li>{song.song_name}</li>
-					{/each}
-				</ol>
+				{#if data.Setlist.length}
+					Setlist
+					<ol class="list-decimal">
+						{#each data.Setlist as song}
+							<li>{song.song_name}</li>
+						{/each}
+					</ol>
+				{/if}
 			</div>
 		</div>
 	</AccordionItem>

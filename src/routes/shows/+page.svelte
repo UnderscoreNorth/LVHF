@@ -9,8 +9,8 @@
 		Loading...
 	{:then}
 		<Accordion>
-			{#each data.data as show}
-				<ShowBox data={show} />
+			{#each data.data as show, i}
+				<ShowBox data={show} index={i} />
 			{/each}
 		</Accordion>
 	{/await}
