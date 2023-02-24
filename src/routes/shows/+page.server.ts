@@ -11,7 +11,8 @@ export async function load() {
 	const { data, error } = await supabase
 		.from('Shows')
 		.select('*,Setlist:id(*)')
-		.order('date', { ascending: false });
+		.order('date', { ascending: false })
+		.order('song_order', { foreignTable: 'Setlist' });
 	if (error) {
 		throw serror(404, 'Not found');
 	} else {
