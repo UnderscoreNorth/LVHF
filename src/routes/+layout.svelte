@@ -13,6 +13,7 @@
 	let links = [
 		['/', 'LVHF'],
 		['/shows', 'SHOWS'],
+		['/bio', 'BIO'],
 		['/blog', 'BLOG']
 	];
 </script>
@@ -84,7 +85,9 @@
 	{:else}
 		<div id="desktop">
 			{#each links as link}
-				<a class={$page.route.id == link[0] ? 'underlined' : ''} href={link[0]}>{link[1]}</a>
+				<a class={($page.route.id == link[0] ? 'underlined' : '') + ' topNav'} href={link[0]}
+					>{link[1]}</a
+				>
 			{/each}
 		</div>
 	{/if}
