@@ -14,6 +14,7 @@
 		['/', 'LVHF'],
 		['/shows', 'SHOWS'],
 		['/bio', 'BIO'],
+		['/music', 'MUSIC'],
 		['/blog', 'BLOG']
 	];
 </script>
@@ -124,7 +125,7 @@
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
-		max-width: 20rem;
+		max-width: 25rem;
 		margin: auto;
 	}
 	#desktop a {
