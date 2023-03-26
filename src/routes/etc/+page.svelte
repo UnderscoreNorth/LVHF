@@ -14,10 +14,9 @@
 	/>
 	<br />
 	<hr />
-	If you're interested in a website like this. The source code is available in the link below, you're
-	also free to email us and we can try to set up something, the trade off to having something custom
-	like this is you don't have an professional company behind you like you would on linktree.
-	<a href="https://github.com/UnderscoreNorth/LVHF">https://github.com/UnderscoreNorth/LVHF</a>
+	If you're interested in a website like this, you're also free to email us and we can try to set up
+	something, the trade off to having something custom is you don't have an professional company behind
+	you like you would if you use linktree.
 </div>
 
 <style>
