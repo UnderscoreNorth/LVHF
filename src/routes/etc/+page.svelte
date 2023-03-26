@@ -14,9 +14,9 @@
 	/>
 	<br />
 	<hr />
-	If you're interested in a website like this, you're also free to email us and we can try to set up
-	something, the trade off to having something custom is you don't have an professional company behind
-	you like you would if you use linktree.
+	If you're interested in a website like this, you can email me and we can try to set up something, the
+	trade off to having something custom is you don't have an professional company behind you like you
+	would if you use linktree.
 </div>
 
 <style>
