@@ -31,7 +31,7 @@
 	</div>
 	<img id="band-photo" src="LVHF Mar 18 Edited.jpg" alt="band" />
 	<p>
-		Indie/Post-Hardcore band from Hamilton, Ontario.
+		Indie/Punk/Noise/Alt band from Hamilton, Ontario.
 		<br />Studio recordings coming soon.
 		<br /> In the meantime, catch us at a show, or watch the past ones on youtube.
 	</p>

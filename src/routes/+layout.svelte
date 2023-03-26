@@ -15,7 +15,8 @@
 		['/shows', 'SHOWS'],
 		['/bio', 'BIO'],
 		['/music', 'MUSIC'],
-		['/blog', 'BLOG']
+		['/blog', 'BLOG'],
+		['/etc', 'ETC']
 	];
 </script>
 
@@ -125,7 +126,7 @@
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
-		max-width: 25rem;
+		max-width: 30rem;
 		margin: auto;
 	}
 	#desktop a {
