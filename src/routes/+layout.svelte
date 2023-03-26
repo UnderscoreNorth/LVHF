@@ -28,8 +28,8 @@
 	<meta
 		property="og:title"
 		content={'LVHF' + $page.route.id !== '/'
-			? ' - ' + $page.route.id?.substring(1).toUpperCase()
-			: ''}
+			? 'LVHF - ' + $page.route.id?.substring(1).toUpperCase()
+			: 'LVHF'}
 	/>
 </svelte:head>
 <svelte:window bind:innerWidth={width} />
@@ -108,7 +108,7 @@
 				on:click={() =>
 					navigator.share({
 						title: 'LVHF',
-						text: 'Indie/Post-Hardcore from Hamilton, Ontario',
+						text: 'Indie/Punk/Noise/Alt from Hamilton, Ontario',
 						url: 'https://lvhf.band' + $page.route.id
 					})}
 			>
