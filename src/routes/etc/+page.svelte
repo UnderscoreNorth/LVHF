@@ -34,4 +34,7 @@
 		padding: 0 3px;
 		margin-top: 3px;
 	}
+	iframe {
+		width: 100%;
+	}
 </style>
