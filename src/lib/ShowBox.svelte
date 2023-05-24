@@ -7,7 +7,10 @@
 
 <div class="accordionItem">
 	<AccordionItem transitionParams={{ duration: 0 }} open={index == 0 ? true : false}>
-		<span slot="header"
+		<span
+			slot="header"
+			style={Date.parse(data.date) > new Date().getTime() &&
+				'background:var(--color-red);padding-right:0.5rem'}
 			>{yyyy}-{mm}-{dd} {hh}:{mi} - {data.venue}, {data.city}, {data.province}</span
 		>
 

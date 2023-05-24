@@ -5,11 +5,9 @@
 		<tr><td>Guitar<br />Vocals</td><td>Drums</td><td>Bass<br />Vocals</td><td>Guitar</td></tr>
 	</table>
 	<img id="band-photo" src="Miniputt.jpg" alt="Miniputt" />
-	LVHF is a genre blending rock band from Hamilton, Ontario that runs through the gamut of indie rock,
-	and what was the 90s. Emerging 22 years after the end of the era, their music mixes influences of pop
-	punk, noise rock, post-hardcore (Before it become screamo, important distinction), alternative, indie,
-	post-punk, and everything in between.<br /><br /> LVHF gives what it takes. Just don't ask us what
-	the letters stand for.
+	LVHF is an altrock band from Hamilton, Ontario that runs through the gamut of the 90s, taking influence
+	from pop punk, noise rock, post-hardcore, alternative, indie rock, post-punk, and everything in between.<br
+	/><br />
 </div>
 
 <style>

@@ -12,7 +12,7 @@ export async function load() {
 		.from('Shows')
 		.select('*')
 		.gte('date', new Date().toLocaleDateString())
-		.order('date', { ascending: false });
+		.order('date', { ascending: true });
 	if (error) {
 		throw serror(404, 'Not found');
 	} else {
