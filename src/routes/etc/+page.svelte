@@ -2,7 +2,7 @@
 	This page is for random items I want to put on the site relating to the band, because 2000s era
 	blogs must live on. <br />
 	<hr />
-	Playlist of good songs
+	Alex's playlist of good songs
 	<iframe
 		width="560"
 		height="315"
@@ -13,6 +13,16 @@
 		allowfullscreen
 	/>
 	<br />
+	Ryan's playlist of good songs
+	<iframe
+		width="560"
+		height="315"
+		src="https://www.youtube.com/embed/videoseries?list=PLjmvzxfIhGvUhI3vey6qfsAyBsQ98OsVY"
+		title="YouTube video player"
+		frameborder="0"
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+		allowfullscreen
+	/><br />
 </div>
 
 <style>
