@@ -6,7 +6,7 @@
 	Loading...
 {:then}
 	{#each data.data as blog}
-		{@html blog.content} -{blog.date}
+		{@html `${blog.content} - ${blog.date}`}
 		<hr />
 	{/each}
 {/await}
