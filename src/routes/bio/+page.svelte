@@ -1,11 +1,11 @@
 <div id="main">
 	LVHF is:
 	<table>
-		<tr><th>Alex</th><th>Ryan</th><th>Will</th><th>Ali</th></tr>
-		<tr><td>Guitar<br />Vocals</td><td>Drums</td><td>Bass<br />Vocals</td><td>Guitar</td></tr>
+		<tr><th>Alex</th><th>Ryan</th><th>Will</th></tr>
+		<tr><td>Guitar<br />Vocals</td><td>Drums</td><td>Bass<br />Vocals</td></tr>
 	</table>
-	<img id="band-photo" src="Miniputt.jpg" alt="Miniputt" />
-	LVHF is an altrock band from Hamilton, Ontario that runs through the gamut of the 90s, taking influence
+	<img id="band-photo" src="ParkingLot.jpg" alt="ParkingLot" />
+	LVHF is a rock band from Hamilton, Ontario that runs through the gamut of the 90s, taking influence
 	from pop punk, noise rock, post-hardcore, alternative, indie rock, post-punk, and everything in between.<br
 	/><br />
 </div>
