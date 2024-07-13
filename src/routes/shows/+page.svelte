@@ -18,6 +18,8 @@
 
 <style>
 	#main {
-		margin: 1rem;
+		width: calc(100% - 2rem);
+		max-width: 600px;
+		margin: auto;
 	}
 </style>

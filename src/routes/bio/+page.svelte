@@ -5,9 +5,8 @@
 		<tr><td>Guitar<br />Vocals</td><td>Drums</td><td>Bass<br />Vocals</td></tr>
 	</table>
 	<img id="band-photo" src="ParkingLot.jpg" alt="ParkingLot" />
-	LVHF is a rock band from Hamilton, Ontario that runs through the gamut of the 90s, taking influence
-	from pop punk, noise rock, post-hardcore, alternative, indie rock, post-punk, and everything in between.<br
-	/><br />
+	Bowling team from Hamilton, Ontario that makes a mix of 90s influenced post-hardcore, indie rock, and
+	whatever else.<br /><br />
 </div>
 
 <style>

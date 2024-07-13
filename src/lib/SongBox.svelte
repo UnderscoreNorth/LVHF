@@ -5,7 +5,7 @@
 
 <div class="accordionItem">
 	<AccordionItem transitionParams={{ duration: 0 }}>
-		<span slot="header">{data.song_name}</span>
+		<span slot="header">{(data.track_order ? data.track_order + '. ' : '') + data.song_name}</span>
 		<div id="lyrics">
 			{@html data.lyrics}
 		</div>
