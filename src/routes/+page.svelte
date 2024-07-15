@@ -23,11 +23,7 @@
 		{/await}
 	</div>
 	<img id="band-photo" src="LVHF Mar 18 Edited.jpg" alt="band" />
-	<p>
-		Alt Rock band from Hamilton, Ontario.
-		<br />Studio recordings coming soon.
-		<br /> In the meantime, catch us at a show, or watch the past ones on youtube.
-	</p>
+	<p>Post hardcore/indie rock band from Hamilton, Ontario.</p>
 </div>
 
 <style>

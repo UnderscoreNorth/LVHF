@@ -27,7 +27,7 @@ export async function load() {
 			return a.song_name > b.song_name ? 1 : -1;
 		});
 		const groupedData: Record<string, { cover: string; date: Date; songs: Array<any> }> = {};
-		for (let row of data) {
+		for (const row of data) {
 			if (row.Release === null) {
 				row.Release = { release_name: 'Unreleased' };
 			}
