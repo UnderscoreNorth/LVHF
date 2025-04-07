@@ -21,8 +21,8 @@ export async function load() {
 			if (a.Release && !b.Release) return -1;
 			if (b.Release && !a.Release) return 1;
 			if (a.Release && b.Release) {
-				if (a.Release.release_date > b.Release.release_date) return 1;
-				if (a.Release.release_date < b.Release.release_date) return -1;
+				if (a.Release.release_date > b.Release.release_date) return -1;
+				if (a.Release.release_date < b.Release.release_date) return 1;
 				return a.track_order > b.track_order ? 1 : -1;
 			}
 			return a.song_name > b.song_name ? 1 : -1;
