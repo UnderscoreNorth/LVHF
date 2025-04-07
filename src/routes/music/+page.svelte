@@ -1,9 +1,14 @@
 <script lang="ts">
+	import Bandcamp from '../../lib/icons/Bandcamp.svelte';
+	import Spotify from '../../lib/icons/Spotify.svelte';
+	import Youtube from '../../lib/icons/Youtube.svelte'
 	import SongBox from '../../lib/SongBox.svelte';
 	import { Accordion } from 'flowbite-svelte';
+	import {type GroupedData} from './groupedData'
 	export let data: {
-		data: Record<string, { cover: string; date: Date; songs: Array<any> }>;
+		data: GroupedData;
 	};
+	console.log(data)
 </script>
 
 <div id="main">
@@ -18,6 +23,9 @@
 						<b>{release}</b>
 						{#if data.data[release].cover}
 							<br />{data.data[release].date}
+							<br /><Bandcamp url={data.data[release].bandcamp_link}/>
+							<Spotify url={data.data[release].spotify_link} />
+							<Youtube url={data.data[release].youtube_link} />
 							<br /><img alt="cover" class="albumCover" src={data.data[release].cover} />
 						{/if}
 					</td>
