@@ -6,8 +6,6 @@ services:
       dockerfile: Dockerfile
     container_name: lvhf
     restart: unless-stopped
-    depends_on:
-      - express
     ports:
       - '5174:5174'
     volumes:
