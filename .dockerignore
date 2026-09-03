@@ -1,0 +1,16 @@
+node_modules
+npm-debug.log
+.svelte-kit
+build
+.git
+.gitignore
+.env
+.env.local
+.env.*.local
+README.md
+.vscode
+.idea
+*.log
+.DS_Store
+dist
+coverage
