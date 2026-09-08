@@ -19,7 +19,7 @@
 		Loading...
 	{:else}
 		<Accordion>
-			{#each data.data as show, i}
+			{#each data as show, i}
 				<ShowBox data={show} index={i} />
 			{/each}
 		</Accordion>
