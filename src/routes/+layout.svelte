@@ -1,5 +1,4 @@
 <script lang="ts">
-	import '../app.postcss';
 	import { Drawer } from 'flowbite-svelte';
 	import { sineIn } from 'svelte/easing';
 	import { page } from '$app/stores';

@@ -1,9 +1,9 @@
-<script>
-	export let url = null;
+<script lang="ts">
+	export let url: null | string = null;
 </script>
 
 <a
-	href={url ??"https://open.spotify.com/artist/7FUmvohrZnmDoF1xBzg3nz?si=hxDgdIQFR6auOIHIq5RZQQ"}
+	href={url ?? 'https://open.spotify.com/artist/7FUmvohrZnmDoF1xBzg3nz?si=hxDgdIQFR6auOIHIq5RZQQ'}
 	class="icon"
 >
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon">

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { AccordionItem } from 'flowbite-svelte';
-	export let data: Object;
+	export let data: { track_order: number; song_name: string; lyrics: string };
 </script>
 
 <div class="accordionItem">

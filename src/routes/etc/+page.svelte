@@ -43,12 +43,6 @@
 		max-width: 600px;
 		margin: auto;
 	}
-	#main a {
-		background: rgba(255, 255, 255, 0.5);
-		border-radius: 3px;
-		padding: 0 3px;
-		margin-top: 3px;
-	}
 	iframe {
 		width: 100%;
 	}

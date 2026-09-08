@@ -1,19 +1,29 @@
 <script lang="ts">
+	import { supabase } from '$lib/supabase';
 	import ShowBox from '../../lib/ShowBox.svelte';
 	import { Accordion } from 'flowbite-svelte';
-	export let data: unknown;
+
+	let data: any[] = [];
+	supabase
+		.from('Shows')
+		.select('*,Setlist:id(*)')
+		.order('date', { ascending: false })
+		.order('song_order', { foreignTable: 'Setlist' })
+		.then((res) => {
+			if (res.data !== null) data = res.data;
+		});
 </script>
 
 <div id="main">
-	{#await data}
+	{#if data.length == 0}
 		Loading...
-	{:then}
+	{:else}
 		<Accordion>
 			{#each data.data as show, i}
 				<ShowBox data={show} index={i} />
 			{/each}
 		</Accordion>
-	{/await}
+	{/if}
 </div>
 
 <style>

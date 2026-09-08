@@ -1,12 +1,22 @@
-<script>
-	export let data;
+<script lang="ts">
+	import { supabase } from '$lib/supabase';
+
+	let data: any[] = [];
+	supabase
+		.from('Blog')
+		.select('*')
+		.order('date', { ascending: false })
+		.order('id', { ascending: false })
+		.then((res) => {
+			if (res.data !== null) data = res.data;
+		});
 </script>
 
-{#await data}
+{#if data.length == 0}
 	Loading...
-{:then}
-	{#each data.data as blog}
+{:else}
+	{#each data as blog}
 		{@html `${blog.content} - ${blog.date}`}
 		<hr />
 	{/each}
-{/await}
+{/if}

@@ -1,6 +1,14 @@
 <script lang="ts">
 	import { AccordionItem } from 'flowbite-svelte';
-	export let data: Object;
+	export let data: {
+		date: string;
+		video_link?: string;
+		poster: string;
+		venue: string;
+		province: string;
+		city: string;
+		Setlist: Array<{ song_name: string }>;
+	};
 	export let index: number;
 	const [yyyy, mm, dd, hh, mi] = data.date.split(/[/:\-T]/);
 </script>
@@ -9,9 +17,9 @@
 	<AccordionItem transitionParams={{ duration: 0 }} open={index == 0 ? true : false}>
 		<span
 			slot="header"
-			style={Date.parse(data.date) > new Date().getTime() &&
-				'background:var(--color-red);padding-right:0.5rem'}
-			>{yyyy}-{mm}-{dd} {hh}:{mi} - {data.venue}, {data.city}, {data.province}</span
+			style={Date.parse(data.date) > new Date().getTime()
+				? 'background:var(--color-red);padding-right:0.5rem'
+				: ''}>{yyyy}-{mm}-{dd} {hh}:{mi} - {data.venue}, {data.city}, {data.province}</span
 		>
 
 		<div id="details">
