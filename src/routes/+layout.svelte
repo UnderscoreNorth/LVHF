@@ -13,7 +13,6 @@
 		duration: 0,
 		easing: sineIn
 	};
-	let width: number;
 	let links = [
 		['/', 'LVHF'],
 		['/shows', 'SHOWS'],
@@ -36,7 +35,6 @@
 			: 'LVHF'}
 	/>
 </svelte:head>
-<svelte:window bind:innerWidth={width} />
 <Drawer
 	backdrop={true}
 	transitiontype="fly"
@@ -61,64 +59,63 @@
 		</div>
 	</div>
 </Drawer>
-<nav>
-	{#if width < 1000}
-		<button class="icon" on:click={() => (drawerHidden = false)}>
+<nav id='mobileView'>
+	<button class="icon" on:click={() => (drawerHidden = false)}>
+		<svg
+			class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-1shn170"
+			focusable="false"
+			aria-hidden="true"
+			viewBox="0 0 24 24"
+			data-testid="MenuIcon"
+			tabindex="-1"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" /></svg
+		>
+	</button>
+	<a href="/">LVHF</a>{$page.route.id !== '/'
+		? '-' + $page.route.id?.substring(1).toUpperCase()
+		: ''}
+	<div id="instalink">
+		<Instagram />
+		<Spotify />
+	</div>
+	<div id="share">
+		<button
+			class="icon"
+			on:click={() =>
+				navigator.share({
+					title: 'LVHF',
+					text: 'Indie/Punk/Noise/Alt from Hamilton, Ontario',
+					url: 'https://lvhf.band' + $page.route.id
+				})}
+		>
 			<svg
 				class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-1shn170"
 				focusable="false"
 				aria-hidden="true"
 				viewBox="0 0 24 24"
-				data-testid="MenuIcon"
-				tabindex="-1"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" /></svg
+				data-testid="ShareIcon"
+				tabindex="-1"
+				><path
+					d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"
+				/></svg
 			>
 		</button>
-		<a href="/">LVHF</a>{$page.route.id !== '/'
-			? '-' + $page.route.id?.substring(1).toUpperCase()
-			: ''}
-		<div id="instalink">
-			<Instagram />
-			<Spotify />
-		</div>
-		<div id="share">
-			<button
-				class="icon"
-				on:click={() =>
-					navigator.share({
-						title: 'LVHF',
-						text: 'Indie/Punk/Noise/Alt from Hamilton, Ontario',
-						url: 'https://lvhf.band' + $page.route.id
-					})}
+	</div>
+</nav>
+<nav id='desktopView'>
+	<div style="float:left;width:0;white-space:nowrap">
+		<Instagram />
+		<Youtube />
+		<Spotify />
+		<Email />
+		<Bandcamp />
+	</div>
+	<div id="desktop">
+		{#each links as link}
+			<a class={($page.route.id == link[0] ? 'underlined' : '') + ' topNav'} href={link[0]}
+				>{link[1]}</a
 			>
-				<svg
-					class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-1shn170"
-					focusable="false"
-					aria-hidden="true"
-					viewBox="0 0 24 24"
-					data-testid="ShareIcon"
-					tabindex="-1"
-					><path
-						d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"
-					/></svg
-				>
-			</button>
-		</div>
-	{:else}
-		<div style="float:left;width:0;white-space:nowrap">
-			<Instagram />
-			<Youtube />
-			<Spotify />
-			<Email />
-			<Bandcamp />
-		</div>
-		<div id="desktop">
-			{#each links as link}
-				<a class={($page.route.id == link[0] ? 'underlined' : '') + ' topNav'} href={link[0]}
-					>{link[1]}</a
-				>
-			{/each}
-		</div>
-	{/if}
+		{/each}
+	</div>
 </nav>
 
 <slot />
@@ -217,5 +214,19 @@
 	}
 	:global(#drawer a svg) {
 		fill: var(--color-red);
+	}
+	#desktopView{
+		display:flex;
+	}
+	#mobileView{
+		display:none;
+	}
+	@media (max-width:1000px){
+		#desktopView{
+			display:none;
+		}
+		#mobileView{
+			display:flex;
+		}
 	}
 </style>
