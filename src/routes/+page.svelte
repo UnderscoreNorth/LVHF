@@ -25,8 +25,6 @@
 					>
 				{/each}
 			</table>
-		{:else}
-			Loading...
 		{/if}
 	</div>
 	<img id="band-photo" src="LVHF Mar 18 Edited.jpg" alt="band" />
