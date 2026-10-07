@@ -1,10 +1,13 @@
 # Backend Dockerfile for Express + SQLite
 FROM node:24-alpine
 
-RUN apt-get update && apt-get install -y \
-    python3 \
-    make \
-    g++ \
+RUN apt-get update \
+    && apt-get install -y \
+        python3 \
+        make \
+        g++ \
+        sqlite3 \
+        libsqlite3-dev \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
