@@ -1,0 +1,16 @@
+# Build stage for SvelteKit static site
+FROM node:18-alpine AS builder
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm ci
+
+# Copy source code
+COPY . .
+
+# Build the static site
+RUN npm run build

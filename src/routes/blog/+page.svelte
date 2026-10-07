@@ -1,22 +1,14 @@
 <script lang="ts">
-	import { supabase } from '$lib/supabase';
+	import { blogApi } from '$lib/api';
 
-	let data: any[] = [];
-	supabase
-		.from('Blog')
-		.select('*')
-		.order('date', { ascending: false })
-		.order('id', { ascending: false })
-		.then((res) => {
-			if (res.data !== null) data = res.data;
-		});
+	let data = blogApi.getAll();
 </script>
 
-{#if data.length == 0}
+{#await data}
 	Loading...
-{:else}
-	{#each data as blog}
+{:then res}
+	{#each res as blog}
 		{@html `${blog.content} - ${blog.date}`}
 		<hr />
 	{/each}
-{/if}
+{/await}
