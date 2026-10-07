@@ -18,7 +18,7 @@ services:
     container_name: lvhf-backend
     restart: unless-stopped
     ports:
-      - '3000:3000'
+      - '3000:5175'
     volumes:
       # Persist SQLite database
       - ./data:/app/data
