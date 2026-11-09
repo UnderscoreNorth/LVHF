@@ -1,14 +1,4 @@
 services:
-  # Static Frontend (SvelteKit built with nginx)
-  frontend:
-    build:
-      context: .
-      dockerfile: Dockerfile.frontend
-    container_name: lvhf-frontend
-    restart: unless-stopped
-    volumes:
-      # Mount source code for hot-reload in dev mode
-      - ./build:/app/build
 
   # Express Backend with SQLite
   backend:
@@ -16,13 +6,9 @@ services:
       context: .
       dockerfile: Dockerfile.backend
     container_name: lvhf-backend
-    restart: unless-stopped
     ports:
-      - '3000:5175'
+      - '5175:5175'
     volumes:
-      # Persist SQLite database
       - ./data:/app/data
-      # Mount the database file directly
-      - ./sqlite.db:/app/sqlite.db
     environment:
       - NODE_ENV=production

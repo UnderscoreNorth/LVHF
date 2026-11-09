@@ -4,7 +4,7 @@ import { blog, release, setlists, shows, songs } from './db/tables';
 import { eq, desc } from 'drizzle-orm';
 
 const app = express();
-const PORT = 3000;
+const PORT = 5175;
 
 app.use(express.json());
 app.use((req, res, next) => {
